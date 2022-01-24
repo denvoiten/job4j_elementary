@@ -19,6 +19,7 @@ public class Converter {
 
         boolean passedEu = expected == outEu;
         boolean passedDol = expected == outDol;
+
         System.out.println(inEu + " rubles are 2. Test result : " + passedEu);
         System.out.println(inDol + " rubles are 2. Test result : " + passedDol);
     }
