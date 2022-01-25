@@ -125,15 +125,4 @@ public class ChessBoardTest {
         Assert.assertEquals(expected, result);
     }
 
-    @Test
-    public void whenY2isGreater7ThenWa() {
-        int x1 = 5;
-        int y1 = 2;
-        int x2 = 2;
-        int y2 = 5;
-        int result = ChessBoard.way(x1, y1, x2, y2);
-        int expected = 3;
-        Assert.assertEquals(expected, result);
-    }
-
 }
