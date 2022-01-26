@@ -30,4 +30,37 @@ public class FindLoopTest {
         int expected = 5;
         Assert.assertEquals(expected, result);
     }
+
+    @Test
+    public void whenFind3() {
+        int[] data = new int[]{5, 2, 10, 2, 4};
+        int el = 2;
+        int start = 2;
+        int finish = 4;
+        int result = FindLoop.indexOf(data, el, start, finish);
+        int expected = 3;
+        Assert.assertEquals(expected, result);
+    }
+
+    @Test
+    public void whenArrayHasNot88ThenMinus1() {
+        int[] data = new int[]{88, 21, 100, 89, 131, 4};
+        int el = 88;
+        int start = 3;
+        int finish = 5;
+        int result = FindLoop.indexOf(data, el, start, finish);
+        int expected = -1;
+        Assert.assertEquals(expected, result);
+    }
+
+    @Test
+    public void whenArrayHas88Then5() {
+        int[] data = new int[]{55, 2, 1, 8, 23, 81, 2, 6, 88};
+        int el = 88;
+        int start = 3;
+        int finish = 8;
+        int result = FindLoop.indexOf(data, el, start, finish);
+        int expected = 8;
+        Assert.assertEquals(expected, result);
+    }
 }
