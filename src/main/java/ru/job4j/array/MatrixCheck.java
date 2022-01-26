@@ -5,11 +5,22 @@ public class MatrixCheck {
         boolean rsl = true;
         int count = 0;
         for (int index = 0; index < board[row].length; index++) {
-                if (board[row][index] != 'X') {
-                    rsl = false;
-                    break;
-                }
+            if (board[row][index] != 'X') {
+                rsl = false;
+                break;
             }
+        }
         return rsl;
+    }
+
+    public static boolean monoVertical(char[][] board, int column) {
+        boolean result = true;
+        for (int index = 0; index < board.length; index++) {
+            if (board[index][column] != 'X') {
+                result = false;
+                break;
+            }
+        }
+        return result;
     }
 }
