@@ -1,0 +1,22 @@
+package ru.job4j.array;
+
+import java.util.Arrays;
+
+public class SortSelected {
+    public static void main(String[] args) {
+        int[] data = new int[]{3, 2, 8, 4, 7, 6, 1, 10, 9, 5};
+        System.out.println(Arrays.toString(sort(data)));
+    }
+
+    public static int[] sort(int[] data) {
+        for (int i = 0; i < data.length; i++) {
+            int temp;
+            int min = MinDiapason.findMin(data, i, data.length - 1);
+            int index = FindLoop.indexOf(data, min, i, data.length - 1);
+            temp = data[i];
+            data[i] = data[index];
+            data[index] = temp;
+        }
+        return data;
+    }
+}
