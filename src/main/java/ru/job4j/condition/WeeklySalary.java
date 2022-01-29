@@ -25,7 +25,6 @@ public class WeeklySalary {
             }
             sum += salary;
         }
-
         return sum;
     }
 }

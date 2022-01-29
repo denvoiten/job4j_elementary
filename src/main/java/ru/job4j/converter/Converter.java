@@ -13,13 +13,10 @@ public class Converter {
         float inEu = 140;
         float inDol = 120;
         float expected = 2;
-
         float outEu = Converter.rubleToEuro(inEu);
         float outDol = Converter.rubleToDollar(inDol);
-
         boolean passedEu = expected == outEu;
         boolean passedDol = expected == outDol;
-
         System.out.println(inEu + " rubles are 2. Test result : " + passedEu);
         System.out.println(inDol + " rubles are 2. Test result : " + passedDol);
     }
